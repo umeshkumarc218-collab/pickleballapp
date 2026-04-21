@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'DM Sans', sans-serif;
+    @apply bg-white text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-lime-500 hover:bg-lime-600 text-court-800 font-heading font-bold tracking-wide px-5 py-2.5 rounded-lg transition-colors duration-150 uppercase text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-court-800 hover:bg-court-700 text-white font-heading font-bold tracking-wide px-5 py-2.5 rounded-lg transition-colors duration-150 uppercase text-sm;
+  }
+
+  .btn-ghost {
+    @apply border border-gray-300 hover:border-court-800 text-gray-700 hover:text-court-800 font-body px-4 py-2 rounded-lg transition-colors duration-150 text-sm;
+  }
+
+  .skill-beginner {
+    @apply bg-green-100 text-green-800 border border-green-200;
+  }
+
+  .skill-intermediate {
+    @apply bg-amber-100 text-amber-800 border border-amber-200;
+  }
+
+  .skill-advanced {
+    @apply bg-red-100 text-red-800 border border-red-200;
+  }
+
+  .skill-all {
+    @apply bg-gray-100 text-gray-700 border border-gray-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-gray-100; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gray-400; }
